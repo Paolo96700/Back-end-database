@@ -13,4 +13,8 @@ class Photo extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function categories(){
+        return $this->belongsToMany(Category::class, 'photo_category');
+    }
+
 }
