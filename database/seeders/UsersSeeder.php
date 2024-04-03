@@ -12,11 +12,12 @@ class UsersSeeder extends Seeder
         $users = config('users');
 
         foreach($users as $arrUsers){
-            $users = User::create([
+            $user = User::create([
                 "name"         => $arrUsers['name'],
                 "email"        => $arrUsers['email'],
                 "password"     => $arrUsers['password'],
             ]);
+            $user->roles()->sync($arrUsers['roles']);
         }
    }
 }
