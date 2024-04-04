@@ -9,9 +9,16 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900 dark:text-gray-100">
-                    {{ __("You're logged in!") }}
+                    <h1>Ciao ti diamo il benvenuto nel tuo portale per caricare le foto! per vedere la tua lista clicca il pulsante sottostante</h1>
+                    <button class="bg-gray-500 px-6 py-2 rounded">
+                        <a href="{{ url('/admin/photos') }}">Lista foto</a>
+                    </button>
                 </div>
             </div>
         </div>
     </div>
+
+    
+
+    
 </x-app-layout>
